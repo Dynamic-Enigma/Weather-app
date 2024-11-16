@@ -254,7 +254,40 @@ h1 i {
   font-weight: 500;
 }
 
-@media (max-width: 600px) {
+/* Mobile Screens (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  .weather-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search {
+    flex-direction: column;
+  }
+  
+  .search button {
+    width: 100%;
+  }
+  
+  .weather-card p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Tablet Screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
   .container {
     padding: 20px;
   }
@@ -265,5 +298,24 @@ h1 i {
   
   .weather-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* PC/Desktop Screens (769px and above) */
+@media (min-width: 769px) {
+  .container {
+    padding: 30px;
+  }
+  
+  .weather-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .forecast {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
